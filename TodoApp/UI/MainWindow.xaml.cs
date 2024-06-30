@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TodoApp.Core.Domain.Entities;
 using TodoApp.Presentation.Controllers;
 
 namespace TodoApp.UI;
@@ -14,5 +15,49 @@ public partial class MainWindow : Window
     {
         _taskController = taskController;
         InitializeComponent();
+    }
+    
+    private void OnAddTask(object sender, EventArgs e)
+    {
+        // Добавление задачи
+        var task = new TaskEntity
+        {
+            Title = "New Task",
+            IsUrgent = false,
+            IsImportant = false
+        };
+        _taskController.AddTask(task);
+        RefreshTaskList();
+    }
+
+    private void OnEditTask(object sender, EventArgs e)
+    {
+        // Редактирование задачи
+    }
+
+    private void OnDeleteTask(object sender, EventArgs e)
+    {
+        // Удаление задачи
+    }
+
+    private void OnMarkTaskAsCompleted(object sender, EventArgs e)
+    {
+        // Отметка задачи как выполненной
+    }
+
+    private void OnReturnTaskToCurrent(object sender, EventArgs e)
+    {
+        // Возврат задачи в текущие
+    }
+
+    private void OnSearchTask(object sender, EventArgs e)
+    {
+        // Поиск задач
+    }
+
+    private void RefreshTaskList()
+    {
+        var tasks = _taskController.ViewTasks();
+        // Обновление списка задач в UI
     }
 }
