@@ -7,9 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add SearchTasksUseCase">
-      <change afterPath="$PROJECT_DIR$/TodoApp/Infrastructure/Repositories/TaskRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add InMemoryTaskRepository">
       <change beforePath="$PROJECT_DIR$/TodoApp/TodoApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/TodoApp.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719710871729</updated>
-      <workItem from="1719710872909" duration="4096000" />
+      <workItem from="1719710872909" duration="4498000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -127,7 +125,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719714161456</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add InMemoryTaskRepository">
+      <option name="closed" value="true" />
+      <created>1719715295154</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719715295154</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +148,7 @@
     <MESSAGE value="Add MarkTaskAsCompletedUseCase" />
     <MESSAGE value="Add ReturnTaskToCurrentUseCase" />
     <MESSAGE value="Add SearchTasksUseCase" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add SearchTasksUseCase" />
+    <MESSAGE value="Add InMemoryTaskRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add InMemoryTaskRepository" />
   </component>
 </project>
