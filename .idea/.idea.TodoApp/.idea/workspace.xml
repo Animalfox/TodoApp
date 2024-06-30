@@ -7,12 +7,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/AddTaskUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/EditTaskUseCase.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp/Core/Domain/Entities/TaskEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp/Core/Domain/Interfaces/ITaskRepository.cs" afterDir="false" />
+    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ViewTasksUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
   "associatedIndex": 7
@@ -81,15 +80,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1719710871729</updated>
-      <workItem from="1719710872909" duration="1567000" />
+      <workItem from="1719710872909" duration="2279000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1719712841621</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719712841621</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
 </project>
