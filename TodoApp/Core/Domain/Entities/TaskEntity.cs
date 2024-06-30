@@ -1,6 +1,6 @@
 ﻿namespace TodoApp.Core.Domain.Entities;
 
-public class TaskEntity
+public abstract class TaskEntity
 {
   public int Id { get; set; }
   public required string Title { get; set; }

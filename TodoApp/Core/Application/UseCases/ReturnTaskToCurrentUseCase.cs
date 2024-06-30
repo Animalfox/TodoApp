@@ -2,14 +2,14 @@
 
 namespace TodoApp.Core.Application.UseCases;
 
-public class ReturnTaskToCurrentUseCase(ITaskService taskService)
+public class ReturnTaskToCurrentUseCase(ITaskRepository taskRepository)
 {
   public void Execute(int taskId)
   {
-    var task = taskService.GetTaskById(taskId);
+    var task = taskRepository.GetTaskById(taskId);
     if (!task.IsCompleted) return;
     task.IsCompleted = false;
-    taskService.UpdateTask(task);
+    taskRepository.UpdateTask(task);
     // logic to discount points
   }
 }

@@ -2,7 +2,7 @@
 
 namespace TodoApp.Core.Application.Services;
 
-public interface ITaskService
+public interface ITaskRepository
 {
   void AddTask(TaskEntity task);
   void UpdateTask(TaskEntity task);

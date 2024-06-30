@@ -7,8 +7,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add InMemoryTaskRepository">
-      <change beforePath="$PROJECT_DIR$/TodoApp/TodoApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/TodoApp.csproj" afterDir="false" />
+    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add UI Layer">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/App.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/App.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/AddTaskUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/AddTaskUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/DeleteTaskUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/DeleteTaskUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/EditTaskUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/EditTaskUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/MarkTaskAsCompletedUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/MarkTaskAsCompletedUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ReturnTaskToCurrentUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ReturnTaskToCurrentUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/SearchTasksUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/SearchTasksUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ViewTasksUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ViewTasksUseCase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Domain/Entities/TaskEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Domain/Entities/TaskEntity.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Domain/Interfaces/ITaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Domain/Interfaces/ITaskRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +32,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/TodoApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/App.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/App.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/App.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/App.xaml" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskService.cs" root0="SKIP_HIGHLIGHTING" />
@@ -36,25 +54,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Project.TodoApp.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Animalfox\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Animalfox\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Animalfox\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Animalfox\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Animalfox\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Animalfox\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="TodoApp" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -133,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719715295154</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add UI Layer">
+      <option name="closed" value="true" />
+      <created>1719717238219</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719717238219</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +176,7 @@
     <MESSAGE value="Add ReturnTaskToCurrentUseCase" />
     <MESSAGE value="Add SearchTasksUseCase" />
     <MESSAGE value="Add InMemoryTaskRepository" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add InMemoryTaskRepository" />
+    <MESSAGE value="Add UI Layer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add UI Layer" />
   </component>
 </project>

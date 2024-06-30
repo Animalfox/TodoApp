@@ -3,10 +3,10 @@ using TodoApp.Core.Domain.Entities;
 
 namespace TodoApp.Core.Application.UseCases;
 
-public class EditTaskUseCase(ITaskService taskService)
+public class EditTaskUseCase(ITaskRepository taskRepository)
 {
   public void Execute(TaskEntity task)
   {
-    taskService.UpdateTask(task);
+    taskRepository.UpdateTask(task);
   }
 }

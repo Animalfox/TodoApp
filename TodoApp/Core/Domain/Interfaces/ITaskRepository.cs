@@ -1,12 +1,13 @@
-﻿using TodoApp.Core.Domain.Entities;
+﻿using TodoApp.Core.Application.Services;
+using TodoApp.Core.Domain.Entities;
 
 namespace TodoApp.Core.Domain.Interfaces;
 
-public interface ITaskRepository
+public interface ITaskRepository : Application.Services.ITaskRepository
 {
-  void AddTask(TaskEntity task);
-  void UpdateTask(TaskEntity task);
-  void DeleteTask(int taskId);
-  TaskEntity? GetTaskById(int taskId);
-  IEnumerable<TaskEntity> GetAllTasks();
+  new void AddTask(TaskEntity task);
+  new void UpdateTask(TaskEntity task);
+  new void DeleteTask(int taskId);
+  new TaskEntity? GetTaskById(int taskId);
+  new IEnumerable<TaskEntity> GetAllTasks();
 }

@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using TodoApp.Presentation.Controllers;
 
 namespace TodoApp.UI;
 
@@ -7,8 +8,11 @@ namespace TodoApp.UI;
 /// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow()
+    private readonly TaskController _taskController;
+    
+    public MainWindow(TaskController taskController)
     {
+        _taskController = taskController;
         InitializeComponent();
     }
 }

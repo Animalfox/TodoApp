@@ -3,11 +3,11 @@ using TodoApp.Core.Domain.Entities;
 
 namespace TodoApp.Core.Application.UseCases;
 
-public class ViewTasksUseCase(ITaskService taskService)
+public class ViewTasksUseCase(ITaskRepository taskRepository)
 {
   public IEnumerable<TaskEntity> Execute()
   {
-    var tasks = taskService.GetAllTasks();
+    var tasks = taskRepository.GetAllTasks();
     var sortedTasks = tasks
       .OrderBy(t => t.CreatedAt)
       .ThenBy(t => t.ParentTaskIds.Count != 0 ? t.ParentTaskIds.Max() : t.Id)

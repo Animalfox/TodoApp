@@ -3,10 +3,10 @@ using TodoApp.Core.Domain.Entities;
 
 namespace TodoApp.Core.Application.UseCases;
 
-public class DeleteTaskUseCase(ITaskService taskService)
+public class DeleteTaskUseCase(ITaskRepository taskRepository)
 {
   public void Execute(int taskId)
   {
-    taskService.DeleteTask(taskId);
+    taskRepository.DeleteTask(taskId);
   }
 }
