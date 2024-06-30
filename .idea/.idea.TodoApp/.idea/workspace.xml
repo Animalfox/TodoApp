@@ -7,20 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add UI Layer">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/App.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/App.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/App.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/App.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/Services/ITaskRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/AddTaskUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/AddTaskUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/DeleteTaskUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/DeleteTaskUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/EditTaskUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/EditTaskUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/MarkTaskAsCompletedUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/MarkTaskAsCompletedUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ReturnTaskToCurrentUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ReturnTaskToCurrentUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/SearchTasksUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/SearchTasksUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ViewTasksUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Application/UseCases/ViewTasksUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Domain/Entities/TaskEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Domain/Entities/TaskEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/Core/Domain/Interfaces/ITaskRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/Core/Domain/Interfaces/ITaskRepository.cs" afterDir="false" />
+    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add input signals for MainWindow">
       <change beforePath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +27,8 @@
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/UseCases/AddTaskUseCase.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
@@ -160,7 +149,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719717238219</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Send props from app to MainWindow">
+      <option name="closed" value="true" />
+      <created>1719719340149</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719719340149</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add input signals for MainWindow">
+      <option name="closed" value="true" />
+      <created>1719719538290</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719719538290</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +182,8 @@
     <MESSAGE value="Add SearchTasksUseCase" />
     <MESSAGE value="Add InMemoryTaskRepository" />
     <MESSAGE value="Add UI Layer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add UI Layer" />
+    <MESSAGE value="Send props from app to MainWindow" />
+    <MESSAGE value="Add input signals for MainWindow" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add input signals for MainWindow" />
   </component>
 </project>

@@ -14,7 +14,12 @@ public partial class MainWindow : Window
     public MainWindow(TaskController taskController)
     {
         _taskController = taskController;
-        InitializeComponent();
+        InitializeComponents();
+    }
+    
+    private static void InitializeComponents()
+    {
+        // Инициализация компонентов UI
     }
     
     private void OnAddTask(object sender, EventArgs e)
