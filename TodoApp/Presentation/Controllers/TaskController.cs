@@ -11,7 +11,6 @@ public class TaskController(
   ReturnTaskToCurrentUseCase returnTaskToCurrentUseCase,
   SearchTasksUseCase searchTasksUseCase,
   ViewActiveTasksUseCase viewActiveTasksUseCase,
-  ViewAllTasksUseCase viewAllTasksUseCase,
   ViewCompletedTasksUseCase viewCompletedTasksUseCase)
 {
   public void AddTask(TaskEntity task)
@@ -47,11 +46,6 @@ public class TaskController(
   public IEnumerable<TaskEntity> ViewActiveTasks()
   {
     return viewActiveTasksUseCase.Execute();
-  }
-
-  public IEnumerable<TaskEntity> ViewTasks()
-  {
-    return viewAllTasksUseCase.Execute();
   }
 
   public IEnumerable<TaskEntity> ViewCompletedTasks()
