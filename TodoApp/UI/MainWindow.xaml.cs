@@ -45,7 +45,15 @@ public partial class MainWindow : Window
 
   private void OnDeleteTask(object sender, EventArgs e)
   {
-    // Удаление задачи
+    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    {
+      _taskController.DeleteTask(selectedTask.Id);
+      RefreshTaskList();
+    }
+    else
+    {
+      MessageBox.Show("Please select a task to delete.");
+    }
   }
 
   private void OnMarkTaskAsCompleted(object sender, EventArgs e)
