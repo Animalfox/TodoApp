@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Set Window Title">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml" afterDir="false" />
-    </list>
+    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add MainWindow UI Interface" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,6 +21,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TodoApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -88,7 +86,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719710871729</updated>
       <workItem from="1719710872909" duration="4498000" />
-      <workItem from="1719799753709" duration="1141000" />
+      <workItem from="1719799753709" duration="1440000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -186,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719800317294</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Add MainWindow UI Interface">
+      <option name="closed" value="true" />
+      <created>1719800941948</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1719800941948</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,6 +214,7 @@
     <MESSAGE value="Add InitializeComponents" />
     <MESSAGE value="Shrink Window" />
     <MESSAGE value="Set Window Title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set Window Title" />
+    <MESSAGE value="Add MainWindow UI Interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add MainWindow UI Interface" />
   </component>
 </project>

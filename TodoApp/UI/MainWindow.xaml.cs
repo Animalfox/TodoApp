@@ -58,6 +58,6 @@ public partial class MainWindow : Window
     private void RefreshTaskList()
     {
         var tasks = _taskController.ViewTasks();
-        // Обновление списка задач в UI
+        TaskList.ItemsSource = tasks;
     }
 }
