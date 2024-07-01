@@ -71,7 +71,15 @@ public partial class MainWindow : Window
 
   private void OnReturnTaskToCurrent(object sender, EventArgs e)
   {
-    // Возврат задачи в текущие
+    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    {
+      _taskController.ReturnTaskToCurrent(selectedTask.Id);
+      RefreshTaskList();
+    }
+    else
+    {
+      MessageBox.Show("Please select a task to return to current.");
+    }
   }
 
   private void OnSearchTask(object sender, EventArgs e)
