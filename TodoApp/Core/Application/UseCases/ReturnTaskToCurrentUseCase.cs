@@ -1,4 +1,4 @@
-﻿using TodoApp.Core.Application.Services;
+﻿using TodoApp.Core.Domain.Interfaces;
 
 namespace TodoApp.Core.Application.UseCases;
 

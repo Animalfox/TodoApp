@@ -16,18 +16,19 @@ public partial class MainWindow : Window
   {
     _taskController = taskController;
     InitializeComponent();
+    RefreshTaskLists();
   }
 
-  private void OnAddTask(object sender, EventArgs e)
+  private void OnAddTask(object sender, RoutedEventArgs e)
   {
     var taskTitle = TaskTitleBox.Text;
-    
+
     if (string.IsNullOrWhiteSpace(taskTitle) || taskTitle == AddTaskPlaceholderText)
     {
       MessageBox.Show("Please enter a task title.");
       return;
     }
-    
+
     var task = new TaskEntity()
     {
       Title = taskTitle,
@@ -35,18 +36,24 @@ public partial class MainWindow : Window
       IsImportant = false
     };
     _taskController.AddTask(task);
-    RefreshTaskList();
+    RefreshTaskLists();
     TaskTitleBox.Clear();
-    TaskTitleBox.Text = AddTaskPlaceholderText; // Restore placeholder text
+    TaskTitleBox.Text = AddTaskPlaceholderText;
   }
 
-  private void OnEditTask(object sender, EventArgs e)
+  private void OnEditTask(object sender, RoutedEventArgs e)
   {
-    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    if (ActiveTaskList.SelectedItem is TaskEntity selectedTask)
     {
       selectedTask.Title = "Edited Task";
       _taskController.EditTask(selectedTask);
-      RefreshTaskList();
+      RefreshTaskLists();
+    }
+    else if (CompletedTaskList.SelectedItem is TaskEntity selectedCompletedTask)
+    {
+      selectedCompletedTask.Title = "Edited Task";
+      _taskController.EditTask(selectedCompletedTask);
+      RefreshTaskLists();
     }
     else
     {
@@ -54,12 +61,17 @@ public partial class MainWindow : Window
     }
   }
 
-  private void OnDeleteTask(object sender, EventArgs e)
+  private void OnDeleteTask(object sender, RoutedEventArgs e)
   {
-    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    if (ActiveTaskList.SelectedItem is TaskEntity selectedTask)
     {
       _taskController.DeleteTask(selectedTask.Id);
-      RefreshTaskList();
+      RefreshTaskLists();
+    }
+    else if (CompletedTaskList.SelectedItem is TaskEntity selectedCompletedTask)
+    {
+      _taskController.DeleteTask(selectedCompletedTask.Id);
+      RefreshTaskLists();
     }
     else
     {
@@ -67,12 +79,12 @@ public partial class MainWindow : Window
     }
   }
 
-  private void OnMarkTaskAsCompleted(object sender, EventArgs e)
+  private void OnMarkTaskAsCompleted(object sender, RoutedEventArgs e)
   {
-    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    if (ActiveTaskList.SelectedItem is TaskEntity selectedTask)
     {
       _taskController.MarkTaskAsCompleted(selectedTask.Id);
-      RefreshTaskList();
+      RefreshTaskLists();
     }
     else
     {
@@ -80,12 +92,12 @@ public partial class MainWindow : Window
     }
   }
 
-  private void OnReturnTaskToCurrent(object sender, EventArgs e)
+  private void OnReturnTaskToCurrent(object sender, RoutedEventArgs e)
   {
-    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    if (CompletedTaskList.SelectedItem is TaskEntity selectedTask)
     {
       _taskController.ReturnTaskToCurrent(selectedTask.Id);
-      RefreshTaskList();
+      RefreshTaskLists();
     }
     else
     {
@@ -93,17 +105,21 @@ public partial class MainWindow : Window
     }
   }
 
-  private void OnSearchTask(object sender, EventArgs e)
+  private void OnSearchTask(object sender, RoutedEventArgs e)
   {
     var query = SearchBox.Text;
     var tasks = _taskController.SearchTasks(query);
-    TaskList.ItemsSource = tasks;
+    ActiveTaskList.ItemsSource = tasks;
+    CompletedTaskList.ItemsSource = tasks;
   }
 
-  private void RefreshTaskList()
+  private void RefreshTaskLists()
   {
-    var tasks = _taskController.ViewTasks();
-    TaskList.ItemsSource = tasks;
+    var activeTasks = _taskController.ViewActiveTasks();
+    ActiveTaskList.ItemsSource = activeTasks;
+
+    var completedTasks = _taskController.ViewCompletedTasks();
+    CompletedTaskList.ItemsSource = completedTasks;
   }
 
   private void TaskTitleBox_GotFocus(object sender, RoutedEventArgs e)

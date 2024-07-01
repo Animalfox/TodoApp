@@ -1,7 +1,6 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
-using TodoApp.Core.Application.Services;
 using TodoApp.Core.Application.UseCases;
 using TodoApp.Infrastructure.Repositories;
 using TodoApp.Presentation.Controllers;
@@ -19,12 +18,14 @@ public partial class App : Application
     var taskRepository = new InMemoryTaskRepository();
     var taskController = new TaskController(
       new AddTaskUseCase(taskRepository),
-      new EditTaskUseCase(taskRepository),
       new DeleteTaskUseCase(taskRepository),
-      new ViewTasksUseCase(taskRepository),
+      new EditTaskUseCase(taskRepository),
       new MarkTaskAsCompletedUseCase(taskRepository),
       new ReturnTaskToCurrentUseCase(taskRepository),
-      new SearchTasksUseCase(taskRepository));
+      new SearchTasksUseCase(taskRepository),
+      new ViewActiveTasksUseCase(taskRepository),
+      new ViewCompletedTasksUseCase(taskRepository),
+      new ViewTasksUseCase(taskRepository));
     var window = new MainWindow(taskController);
     window.Show();
   }

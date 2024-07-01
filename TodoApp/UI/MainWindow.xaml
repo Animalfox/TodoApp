@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Todo Application" Height="200" Width="667">
+        Title="Todo Application" Height="300" Width="667">
   <Window.Resources>
     <Style TargetType="{x:Type Button}">
       <Setter Property="Padding" Value="5" />
@@ -61,7 +61,14 @@
         Click="OnSearchTask" />
     </StackPanel>
 
-    <!-- Список задач -->
-    <ListBox x:Name="TaskList" Grid.Row="2" Margin="10" DisplayMemberPath="Title" />
+    <!-- Вкладки со списками задач -->
+    <TabControl Grid.Row="2" Margin="10">
+      <TabItem Header="Active Tasks">
+        <ListBox x:Name="ActiveTaskList" DisplayMemberPath="Title"/>
+      </TabItem>
+      <TabItem Header="Completed Tasks">
+        <ListBox x:Name="CompletedTaskList" DisplayMemberPath="Title"/>
+      </TabItem>
+    </TabControl>
   </Grid>
 </Window>

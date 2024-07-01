@@ -5,21 +5,18 @@ namespace TodoApp.Presentation.Controllers;
 
 public class TaskController(
   AddTaskUseCase addTaskUseCase,
-  EditTaskUseCase editTaskUseCase,
   DeleteTaskUseCase deleteTaskUseCase,
-  ViewTasksUseCase viewTasksUseCase,
+  EditTaskUseCase editTaskUseCase,
   MarkTaskAsCompletedUseCase markTaskAsCompletedUseCase,
   ReturnTaskToCurrentUseCase returnTaskToCurrentUseCase,
-  SearchTasksUseCase searchTasksUseCase)
+  SearchTasksUseCase searchTasksUseCase,
+  ViewActiveTasksUseCase viewActiveTasksUseCase,
+  ViewCompletedTasksUseCase viewCompletedTasksUseCase,
+  ViewTasksUseCase viewTasksUseCase)
 {
   public void AddTask(TaskEntity task)
   {
     addTaskUseCase.Execute(task);
-  }
-
-  public void EditTask(TaskEntity task)
-  {
-    editTaskUseCase.Execute(task);
   }
 
   public void DeleteTask(int taskId)
@@ -27,9 +24,9 @@ public class TaskController(
     deleteTaskUseCase.Execute(taskId);
   }
 
-  public IEnumerable<TaskEntity> ViewTasks()
+  public void EditTask(TaskEntity task)
   {
-    return viewTasksUseCase.Execute();
+    editTaskUseCase.Execute(task);
   }
 
   public void MarkTaskAsCompleted(int taskId)
@@ -45,5 +42,20 @@ public class TaskController(
   public IEnumerable<TaskEntity> SearchTasks(string query)
   {
     return searchTasksUseCase.Execute(query);
+  }
+
+  public IEnumerable<TaskEntity> ViewActiveTasks()
+  {
+    return viewActiveTasksUseCase.Execute();
+  }
+
+  public IEnumerable<TaskEntity> ViewCompletedTasks()
+  {
+    return viewCompletedTasksUseCase.Execute();
+  }
+
+  public IEnumerable<TaskEntity> ViewTasks()
+  {
+    return viewTasksUseCase.Execute();
   }
 }
