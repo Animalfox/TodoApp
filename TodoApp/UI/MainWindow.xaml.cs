@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Input;
 using TodoApp.Core.Domain.Entities;
 using TodoApp.Presentation.Controllers;
 
@@ -9,7 +10,7 @@ namespace TodoApp.UI;
 /// </summary>
 public partial class MainWindow : Window
 {
-  private const string AddTaskPlaceholderText = "Enter task title";
+  private const string AddTaskPlaceholderText = "Please type a task name and press \"Enter\"…";
   private readonly TaskController _taskController;
 
   public MainWindow(TaskController taskController)
@@ -17,6 +18,7 @@ public partial class MainWindow : Window
     _taskController = taskController;
     InitializeComponent();
     RefreshTaskLists();
+    TaskTitleBox.Text = AddTaskPlaceholderText;
   }
 
   private void OnAddTask(object sender, RoutedEventArgs e)
@@ -38,7 +40,10 @@ public partial class MainWindow : Window
     _taskController.AddTask(task);
     RefreshTaskLists();
     TaskTitleBox.Clear();
-    TaskTitleBox.Text = AddTaskPlaceholderText;
+    if ((e as KeyEventArgs)!.Key != Key.Return)
+    {
+      TaskTitleBox.Text = AddTaskPlaceholderText;
+    }
   }
 
   private void OnEditTask(object sender, RoutedEventArgs e)
@@ -130,5 +135,13 @@ public partial class MainWindow : Window
   private void TaskTitleBox_LostFocus(object sender, RoutedEventArgs e)
   {
     if (string.IsNullOrWhiteSpace(TaskTitleBox.Text)) TaskTitleBox.Text = AddTaskPlaceholderText;
+  }
+
+  private void OnTaskInputKeyDownHandler(object sender, KeyEventArgs e)
+  {
+    if (e.Key == Key.Return)
+    {
+      OnAddTask(sender, e);
+    }
   }
 }
