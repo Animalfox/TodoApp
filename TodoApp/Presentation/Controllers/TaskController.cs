@@ -8,7 +8,7 @@ public class TaskController(
   DeleteTaskUseCase deleteTaskUseCase,
   EditTaskUseCase editTaskUseCase,
   MarkTaskAsCompletedUseCase markTaskAsCompletedUseCase,
-  ReturnTaskToCurrentUseCase returnTaskToCurrentUseCase,
+  MarkTaskAsUncompletedUseCase markTaskAsUncompletedUseCase,
   SearchTasksUseCase searchTasksUseCase,
   ViewActiveTasksUseCase viewActiveTasksUseCase,
   ViewCompletedTasksUseCase viewCompletedTasksUseCase)
@@ -35,7 +35,7 @@ public class TaskController(
 
   public void ReturnTaskToCurrent(int taskId)
   {
-    returnTaskToCurrentUseCase.Execute(taskId);
+    markTaskAsUncompletedUseCase.Execute(taskId);
   }
 
   public IEnumerable<TaskEntity> SearchTasks(string query)

@@ -21,7 +21,7 @@ public partial class App : Application
       new DeleteTaskUseCase(taskRepository),
       new EditTaskUseCase(taskRepository),
       new MarkTaskAsCompletedUseCase(taskRepository),
-      new ReturnTaskToCurrentUseCase(taskRepository),
+      new MarkTaskAsUncompletedUseCase(taskRepository),
       new SearchTasksUseCase(taskRepository),
       new ViewActiveTasksUseCase(taskRepository),
       new ViewCompletedTasksUseCase(taskRepository));
