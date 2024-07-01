@@ -58,7 +58,15 @@ public partial class MainWindow : Window
 
   private void OnMarkTaskAsCompleted(object sender, EventArgs e)
   {
-    // Отметка задачи как выполненной
+    if (TaskList.SelectedItem is TaskEntity selectedTask)
+    {
+      _taskController.MarkTaskAsCompleted(selectedTask.Id);
+      RefreshTaskList();
+    }
+    else
+    {
+      MessageBox.Show("Please select a task to mark as completed.");
+    }
   }
 
   private void OnReturnTaskToCurrent(object sender, EventArgs e)

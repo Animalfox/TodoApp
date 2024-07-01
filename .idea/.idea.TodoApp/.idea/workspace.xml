@@ -7,7 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Add ability to Edit Tasks">
+    <list default="true" id="2a59d5ab-407c-412a-8e55-77402474c110" name="Changes" comment="Reformat and Cleanup">
       <change beforePath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp/UI/MainWindow.xaml.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +23,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TodoApp/App.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/App.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Core/Application/Services/ITaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Infrastructure/Repositories/InMemoryTaskRepository.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/Presentation/Controllers/TaskController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/Animalfox/RiderProjects/TodoApp/TodoApp/UI/MainWindow.xaml.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
@@ -89,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1719710871729</updated>
       <workItem from="1719710872909" duration="4498000" />
-      <workItem from="1719799753709" duration="2336000" />
+      <workItem from="1719799753709" duration="3191000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -211,7 +218,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719801827139</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Add ability to delete tasks">
+      <option name="closed" value="true" />
+      <created>1719802235091</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1719802235091</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Reformat and Cleanup">
+      <option name="closed" value="true" />
+      <created>1719802246796</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1719802246796</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,6 +259,8 @@
     <MESSAGE value="Add MainWindow UI Interface" />
     <MESSAGE value="Add ability to automatic refresh task list" />
     <MESSAGE value="Add ability to Edit Tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add ability to Edit Tasks" />
+    <MESSAGE value="Add ability to delete tasks" />
+    <MESSAGE value="Reformat and Cleanup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reformat and Cleanup" />
   </component>
 </project>
