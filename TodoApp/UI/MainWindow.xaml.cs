@@ -9,55 +9,63 @@ namespace TodoApp.UI;
 /// </summary>
 public partial class MainWindow : Window
 {
-    private readonly TaskController _taskController;
-    
-    public MainWindow(TaskController taskController)
-    {
-        _taskController = taskController;
-        InitializeComponent();
-    }
-    
-    private void OnAddTask(object sender, EventArgs e)
-    {
-        // Добавление задачи
-        var task = new TaskEntity
-        {
-            Title = "New Task",
-            IsUrgent = false,
-            IsImportant = false
-        };
-        _taskController.AddTask(task);
-        RefreshTaskList();
-    }
+  private readonly TaskController _taskController;
 
-    private void OnEditTask(object sender, EventArgs e)
-    {
-        // Редактирование задачи
-    }
+  public MainWindow(TaskController taskController)
+  {
+    _taskController = taskController;
+    InitializeComponent();
+  }
 
-    private void OnDeleteTask(object sender, EventArgs e)
+  private void OnAddTask(object sender, EventArgs e)
+  {
+    var task = new TaskEntity
     {
-        // Удаление задачи
-    }
+      Title = "New Task",
+      IsUrgent = false,
+      IsImportant = false
+    };
+    _taskController.AddTask(task);
+    RefreshTaskList();
+  }
 
-    private void OnMarkTaskAsCompleted(object sender, EventArgs e)
+  private void OnEditTask(object sender, EventArgs e)
+  {
+    if (TaskList.SelectedItem is TaskEntity selectedTask)
     {
-        // Отметка задачи как выполненной
+      selectedTask.Title = "Edited Task";
+      _taskController.EditTask(selectedTask);
+      RefreshTaskList();
     }
+    else
+    {
+      MessageBox.Show("Please select a task to edit.");
+    }
+  }
 
-    private void OnReturnTaskToCurrent(object sender, EventArgs e)
-    {
-        // Возврат задачи в текущие
-    }
+  private void OnDeleteTask(object sender, EventArgs e)
+  {
+    // Удаление задачи
+  }
 
-    private void OnSearchTask(object sender, EventArgs e)
-    {
-        // Поиск задач
-    }
+  private void OnMarkTaskAsCompleted(object sender, EventArgs e)
+  {
+    // Отметка задачи как выполненной
+  }
 
-    private void RefreshTaskList()
-    {
-        var tasks = _taskController.ViewTasks();
-        TaskList.ItemsSource = tasks;
-    }
+  private void OnReturnTaskToCurrent(object sender, EventArgs e)
+  {
+    // Возврат задачи в текущие
+  }
+
+  private void OnSearchTask(object sender, EventArgs e)
+  {
+    // Поиск задач
+  }
+
+  private void RefreshTaskList()
+  {
+    var tasks = _taskController.ViewTasks();
+    TaskList.ItemsSource = tasks;
+  }
 }
