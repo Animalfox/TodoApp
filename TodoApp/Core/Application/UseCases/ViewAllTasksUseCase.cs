@@ -3,7 +3,7 @@ using TodoApp.Core.Domain.Interfaces;
 
 namespace TodoApp.Core.Application.UseCases;
 
-public class ViewTasksUseCase(ITaskRepository taskRepository)
+public class ViewAllTasksUseCase(ITaskRepository taskRepository)
 {
   public IEnumerable<TaskEntity> Execute()
   {

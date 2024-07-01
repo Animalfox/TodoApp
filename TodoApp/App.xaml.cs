@@ -24,8 +24,8 @@ public partial class App : Application
       new ReturnTaskToCurrentUseCase(taskRepository),
       new SearchTasksUseCase(taskRepository),
       new ViewActiveTasksUseCase(taskRepository),
-      new ViewCompletedTasksUseCase(taskRepository),
-      new ViewTasksUseCase(taskRepository));
+      new ViewAllTasksUseCase(taskRepository),
+      new ViewCompletedTasksUseCase(taskRepository));
     var window = new MainWindow(taskController);
     window.Show();
   }

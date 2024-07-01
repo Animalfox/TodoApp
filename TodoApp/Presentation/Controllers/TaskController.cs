@@ -11,8 +11,8 @@ public class TaskController(
   ReturnTaskToCurrentUseCase returnTaskToCurrentUseCase,
   SearchTasksUseCase searchTasksUseCase,
   ViewActiveTasksUseCase viewActiveTasksUseCase,
-  ViewCompletedTasksUseCase viewCompletedTasksUseCase,
-  ViewTasksUseCase viewTasksUseCase)
+  ViewAllTasksUseCase viewAllTasksUseCase,
+  ViewCompletedTasksUseCase viewCompletedTasksUseCase)
 {
   public void AddTask(TaskEntity task)
   {
@@ -49,13 +49,13 @@ public class TaskController(
     return viewActiveTasksUseCase.Execute();
   }
 
+  public IEnumerable<TaskEntity> ViewTasks()
+  {
+    return viewAllTasksUseCase.Execute();
+  }
+
   public IEnumerable<TaskEntity> ViewCompletedTasks()
   {
     return viewCompletedTasksUseCase.Execute();
-  }
-
-  public IEnumerable<TaskEntity> ViewTasks()
-  {
-    return viewTasksUseCase.Execute();
   }
 }
