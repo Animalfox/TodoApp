@@ -84,7 +84,9 @@ public partial class MainWindow : Window
 
   private void OnSearchTask(object sender, EventArgs e)
   {
-    // Поиск задач
+    var query = SearchBox.Text;
+    var tasks = _taskController.SearchTasks(query);
+    TaskList.ItemsSource = tasks;
   }
 
   private void RefreshTaskList()
