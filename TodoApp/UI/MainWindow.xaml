@@ -5,6 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="Todo Application" Height="200" Width="667">
+  <Window.Resources>
+    <Style TargetType="{x:Type Button}">
+      <Setter Property="Padding" Value="5" />
+    </Style>
+    <Style TargetType="{x:Type TextBox}">
+      <Setter Property="Padding" Value="5" />
+    </Style>
+  </Window.Resources>
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
@@ -18,47 +26,39 @@
         x:Name="TaskTitleBox"
         Width="562"
         Margin="0,0,10,0"
-        Padding="5"
         Text="Enter task title"
         GotFocus="TaskTitleBox_GotFocus"
         LostFocus="TaskTitleBox_LostFocus" />
       <Button
         Content="Add Task"
-        Padding="5"
         Click="OnAddTask" />
     </StackPanel>
 
     <!-- Кнопки управления задачами -->
     <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
       <Button
-        Padding="5"
         Content="Edit Task"
         Click="OnEditTask" />
       <Button
         Content="Delete Task"
         Click="OnDeleteTask"
         Margin="5,0,0,0"
-        Padding="5"
         />
       <Button
         Content="Mark as Completed"
         Click="OnMarkTaskAsCompleted"
-        Margin="5,0,0,0"
-        Padding="5" />
+        Margin="5,0,0,0" />
       <Button
         Content="Return to Current"
         Click="OnReturnTaskToCurrent"
-        Margin="5,0,0,0"
-        Padding="5" />
+        Margin="5,0,0,0" />
       <TextBox
         x:Name="SearchBox"
         Width="200"
-        Margin="10,0"
-        Padding="5"/>
+        Margin="10,0" />
       <Button
         Content="Search"
-        Click="OnSearchTask"
-        Padding="5"/>
+        Click="OnSearchTask" />
     </StackPanel>
 
     <!-- Список задач -->
