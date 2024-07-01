@@ -26,7 +26,7 @@ public class TaskController(
   {
     deleteTaskUseCase.Execute(taskId);
   }
-  
+
   public IEnumerable<TaskEntity> ViewTasks()
   {
     return viewTasksUseCase.Execute();

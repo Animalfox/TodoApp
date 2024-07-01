@@ -6,7 +6,7 @@ namespace TodoApp.Infrastructure.Repositories;
 public class InMemoryTaskRepository : ITaskRepository
 {
   private readonly List<TaskEntity> _tasks = [];
-  
+
   private int NextTaskId { get; set; } = 0;
 
   private int GenerateTaskId()
@@ -34,10 +34,7 @@ public class InMemoryTaskRepository : ITaskRepository
   public void DeleteTask(int taskId)
   {
     var task = _tasks.FirstOrDefault(t => t.Id == taskId);
-    if (task != null)
-    {
-      _tasks.Remove(task);
-    }
+    if (task != null) _tasks.Remove(task);
   }
 
   public TaskEntity? GetTaskById(int taskId)
