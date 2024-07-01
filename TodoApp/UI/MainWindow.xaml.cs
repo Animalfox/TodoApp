@@ -9,6 +9,7 @@ namespace TodoApp.UI;
 /// </summary>
 public partial class MainWindow : Window
 {
+  private const string AddTaskPlaceholderText = "Enter task title";
   private readonly TaskController _taskController;
 
   public MainWindow(TaskController taskController)
@@ -19,14 +20,24 @@ public partial class MainWindow : Window
 
   private void OnAddTask(object sender, EventArgs e)
   {
-    var task = new TaskEntity
+    var taskTitle = TaskTitleBox.Text;
+    
+    if (string.IsNullOrWhiteSpace(taskTitle) || taskTitle == AddTaskPlaceholderText)
     {
-      Title = "New Task",
+      MessageBox.Show("Please enter a task title.");
+      return;
+    }
+    
+    var task = new TaskEntity()
+    {
+      Title = taskTitle,
       IsUrgent = false,
       IsImportant = false
     };
     _taskController.AddTask(task);
     RefreshTaskList();
+    TaskTitleBox.Clear();
+    TaskTitleBox.Text = AddTaskPlaceholderText; // Restore placeholder text
   }
 
   private void OnEditTask(object sender, EventArgs e)
@@ -93,5 +104,15 @@ public partial class MainWindow : Window
   {
     var tasks = _taskController.ViewTasks();
     TaskList.ItemsSource = tasks;
+  }
+
+  private void TaskTitleBox_GotFocus(object sender, RoutedEventArgs e)
+  {
+    if (TaskTitleBox.Text == AddTaskPlaceholderText) TaskTitleBox.Text = "";
+  }
+
+  private void TaskTitleBox_LostFocus(object sender, RoutedEventArgs e)
+  {
+    if (string.IsNullOrWhiteSpace(TaskTitleBox.Text)) TaskTitleBox.Text = AddTaskPlaceholderText;
   }
 }

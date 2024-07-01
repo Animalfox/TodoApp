@@ -4,21 +4,64 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Todo Application" Height="200" Width="732">
+        Title="Todo Application" Height="200" Width="667">
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
       <RowDefinition Height="*" />
     </Grid.RowDefinitions>
+
+    <!-- Поле ввода и кнопка Add Task -->
     <StackPanel Orientation="Horizontal" Margin="10">
-      <Button Content="Add Task" Click="OnAddTask" Padding="5" />
-      <Button Content="Edit Task" Click="OnEditTask" Margin="5,0,0,0" Padding="5" />
-      <Button Content="Delete Task" Click="OnDeleteTask" Margin="5,0,0,0" Padding="5" />
-      <Button Content="Mark as Completed" Click="OnMarkTaskAsCompleted" Margin="5,0,0,0" Padding="5" />
-      <Button Content="Return to Current" Click="OnReturnTaskToCurrent" Margin="5,0,0,0" Padding="5" />
-      <TextBox x:Name="SearchBox" Width="200" Margin="10,0" Padding="5" />
-      <Button Content="Search" Click="OnSearchTask" Padding="5" />
+      <TextBox
+        x:Name="TaskTitleBox"
+        Width="562"
+        Margin="0,0,10,0"
+        Padding="5"
+        Text="Enter task title"
+        GotFocus="TaskTitleBox_GotFocus"
+        LostFocus="TaskTitleBox_LostFocus" />
+      <Button
+        Content="Add Task"
+        Padding="5"
+        Click="OnAddTask" />
     </StackPanel>
-    <ListBox x:Name="TaskList" Grid.Row="1" Margin="10" DisplayMemberPath="Title" />
+
+    <!-- Кнопки управления задачами -->
+    <StackPanel Orientation="Horizontal" Margin="10" Grid.Row="1">
+      <Button
+        Padding="5"
+        Content="Edit Task"
+        Click="OnEditTask" />
+      <Button
+        Content="Delete Task"
+        Click="OnDeleteTask"
+        Margin="5,0,0,0"
+        Padding="5"
+        />
+      <Button
+        Content="Mark as Completed"
+        Click="OnMarkTaskAsCompleted"
+        Margin="5,0,0,0"
+        Padding="5" />
+      <Button
+        Content="Return to Current"
+        Click="OnReturnTaskToCurrent"
+        Margin="5,0,0,0"
+        Padding="5" />
+      <TextBox
+        x:Name="SearchBox"
+        Width="200"
+        Margin="10,0"
+        Padding="5"/>
+      <Button
+        Content="Search"
+        Click="OnSearchTask"
+        Padding="5"/>
+    </StackPanel>
+
+    <!-- Список задач -->
+    <ListBox x:Name="TaskList" Grid.Row="2" Margin="10" DisplayMemberPath="Title" />
   </Grid>
 </Window>
